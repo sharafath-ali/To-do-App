@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.Addtask {
+  text-align: center;
+  background-color: #79cce4;
+}
+
+.list{
+  margin-left:30%;
+  margin-right: 30%;
+  background-color:#154c79;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+h6 ,Button {
+    
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: aliceblue;
+}
+*{
+  box-sizing: border-box;
+}
