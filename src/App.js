@@ -6,7 +6,7 @@ import List from './List';
 function App() {
   const [todolist, settodolist] = useState(JSON.parse(localStorage.getItem('todolist')));
   const [newtask, setnewtask] = useState('');
-
+  
   const addTask = () => {
     const trimmedTask = newtask.trim();
     if (trimmedTask !== '') {
@@ -55,7 +55,7 @@ function App() {
             <h6>No tasks available. Start by adding a task!</h6>
           </div>
         ) : (
-          todolist.map((element, key) => {
+          todolist?.map((element, key) => {
             return (
               <List
                 key={key}
