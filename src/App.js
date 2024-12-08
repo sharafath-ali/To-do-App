@@ -50,7 +50,7 @@ function App() {
       </div>
 
       <div className="list">
-        {todolist.length === 0 ? (
+        {todolist?.length === 0 ? (
           <div className="empty-list">
             <h6>No tasks available. Start by adding a task!</h6>
           </div>
