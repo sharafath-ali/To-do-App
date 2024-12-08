@@ -2,10 +2,20 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import List from './List';
+import { useEffect } from 'react';
 
 function App() {
-  const [todolist, settodolist] = useState(JSON.parse(localStorage.getItem('todolist')));
+  const [todolist, settodolist] = useState([]);
   const [newtask, setnewtask] = useState('');
+  
+
+
+  useEffect(() => {
+    const storedTodolist = localStorage.getItem('todolist');
+    if (storedTodolist) {
+      settodolist(JSON.parse(storedTodolist));
+    }
+  },[])
   
   const addTask = () => {
     const trimmedTask = newtask.trim();
