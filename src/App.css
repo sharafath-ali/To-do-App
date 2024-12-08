@@ -50,6 +50,13 @@ body {
   transition: background-color 0.3s;
 }
 
+.task-text {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .task-item:hover {
   background-color: #f0f8ff;
 }

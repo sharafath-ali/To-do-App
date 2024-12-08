@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 function List({ element, Delete, Colorchange }) {
   return (
     <div className="task-item" style={{ backgroundColor: element.color }}>
-      <h6>{element.task}</h6>
+      <h6 className="task-text">{element.task}</h6>
       <div>
         <Button
           variant="outline-danger"
