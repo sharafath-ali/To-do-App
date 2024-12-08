@@ -1,17 +1,30 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-function List({ element, key, Delete, Colorchange }) {
-  console.log(element)
+function List({ element, Delete, Colorchange }) {
   return (
-    <div style={{ textAlign: 'center', backgroundColor: element.color }}>
-      <Button style={{ margin: '30px' }} variant="dark" size="sm" onClick={() => { return Delete(element.id) }} >Remove</Button>
-      <h6 style={{ display: 'inline', margin: '30px' }} >{key} : {element.task}</h6>
-      <Button style={{ margin: '30px' }} variant="dark" size="sm" onClick={() => Colorchange(element.id
-      )}>Complete</Button>
-      <hr /><hr />
+    <div className="task-item" style={{ backgroundColor: element.color }}>
+      <h6>{element.task}</h6>
+      <div>
+        <Button
+          variant="outline-danger"
+          size="sm"
+          style={{ marginRight: '5px' }}
+          onClick={() => Delete(element.id)}
+        >
+          Remove
+        </Button>
+        <Button
+          variant="outline-success"
+          size="sm"
+          style={{ marginRight: '5px' }}
+          onClick={() => Colorchange(element.id)}
+        >
+          Complete
+        </Button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default List
+export default List;
