@@ -22,6 +22,13 @@ function List({ element, Delete, Colorchange }) {
         >
           Complete
         </Button>
+        <Button
+          variant="outline-success"
+          size="sm"
+          style={{ marginRight: '5px' }}
+        >
+          strike 🔥
+        </Button>
       </div>
     </div>
   );
