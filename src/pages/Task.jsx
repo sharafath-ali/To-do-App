@@ -2,8 +2,8 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import './App.css';
-import List from './List';
+import '../App.css';
+import List from '../components/List';
 
 function Task() {
   const [todolist, settodolist] = useState([]);
@@ -13,6 +13,7 @@ function Task() {
     const storedTodolist = localStorage.getItem('todolist');
     if (storedTodolist) {
       settodolist(JSON.parse(storedTodolist));
+
     }
   }, [])
 

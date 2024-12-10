@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import History from './History';
-import Task from './Task';
+import History from './pages/History';
+import Task from './pages/Task';
 
 function App() {
   return (
